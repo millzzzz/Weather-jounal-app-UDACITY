@@ -29,6 +29,9 @@ app.get('/all', (req, res) => {
 
 // POST route
 app.post('/add', (req, res) => {
+    projectData['date'] = req.body.date;
+    projectData['temp'] = req.body.temp;
+    projectData['userResponse'] = req.body.userResponse;
     res.send('POST received');
 });
 
